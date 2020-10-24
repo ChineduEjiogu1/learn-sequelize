@@ -34,6 +34,9 @@ function getAllActors() {
   Return an array of all the movie names from 2008
 */
 function getAllMoviesFrom2008() {
+  return Movie
+  .findAll({ where: {year: 2008}})
+  .then(movies => movies.map(movie => movie.title));
 
 }
 
